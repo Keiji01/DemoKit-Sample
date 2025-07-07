@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="P_Safety" Id="{3af665d7-6873-4846-8277-a5c5c53e4398}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P_Safety
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[GVL_Safety.bErrAck := GVL_IO.arrDIs[8];]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

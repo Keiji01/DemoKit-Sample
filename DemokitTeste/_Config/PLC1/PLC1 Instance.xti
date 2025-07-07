@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.16" ClassName="CTComPlcObjDef">
+	<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" XtvPath="PLC1\PLC1 Instance.xtv" TmcPath="PLC1\PLC1.tmc">
+		<Name>__FILENAME__</Name>
+		<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+		<Contexts>
+			<Context>
+				<Id>0</Id>
+				<Name>PlcTask</Name>
+				<ManualConfig>
+					<OTCID>#x02010050</OTCID>
+				</ManualConfig>
+				<Priority>20</Priority>
+				<CycleTime>10000000</CycleTime>
+			</Context>
+		</Contexts>
+		<TaskPouOids>
+			<TaskPouOid Prio="20" OTCID="#x08502001"/>
+		</TaskPouOids>
+	</Instance>
+	<Mappings>
+		<OwnerA>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 2 (EL1012)">
+				<Link VarA="PlcTask Inputs^GVL_IO.arrDIs[1]" VarB="Channel 1^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.arrDIs[2]" VarB="Channel 2^Input" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL1012)">
+				<Link VarA="PlcTask Inputs^GVL_IO.arrDIs[3]" VarB="Channel 1^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.arrDIs[4]" VarB="Channel 2^Input" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 4 (EL1012)">
+				<Link VarA="PlcTask Inputs^GVL_IO.arrDIs[5]" VarB="Channel 1^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.arrDIs[6]" VarB="Channel 2^Input" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 5 (EL1012)">
+				<Link VarA="PlcTask Inputs^GVL_IO.arrDIs[7]" VarB="Channel 1^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.arrDIs[8]" VarB="Channel 2^Input" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EL2004)">
+				<Link VarA="PlcTask Outputs^GVL_IO.arrDOs[1]" VarB="Channel 1^Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arrDOs[2]" VarB="Channel 2^Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arrDOs[3]" VarB="Channel 3^Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arrDOs[4]" VarB="Channel 4^Output" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 7 (EL4002)">
+				<Link VarA="PlcTask Outputs^GVL_IO.arrAOs[1]" VarB="AO Output Channel 1^Analog output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arrAOs[2]" VarB="AO Output Channel 2^Analog output"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 9 (EL3102)">
+				<Link VarA="PlcTask Inputs^GVL_IO.arrAIs[1]" VarB="AI Standard Channel 1^Value"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.arrAIs[2]" VarB="AI Standard Channel 2^Value"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 10 (EK1100)^Term 15 (EL6900)">
+				<Link VarA="PlcTask Outputs^GVL_Safety.bErrAck" VarB="StandardOutputs^EmergencyGroup.ErrorAcknowledgement_9" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Safety.bRunStopToSafety" VarB="StandardOutputs^EmergencyGroup.Run_10" Size="1"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmItem>

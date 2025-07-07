@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.16" ClassName="CDevEtherCATDef" SubType="111">
+	<Device Id="1" CreateSymbols="true" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="192.168.10.6.2.1" RemoteName="Device 1 (EtherCAT)" InfoImageId="2">
+		<Name>__FILENAME__</Name>
+		<AddressInfo>
+			<Pnp>
+				<DeviceDesc>LAN 2 (TwinCAT-Intel PCI Ethernet Adapter (Gigabit)</DeviceDesc>
+				<DeviceName>\DEVICE\{03208FED-47DC-4803-BEF5-254BE4F15A4F}</DeviceName>
+				<DeviceData>0001054e2633</DeviceData>
+			</Pnp>
+		</AddressInfo>
+		<Image Id="1" AddrType="9" ImageType="3">
+			<Name>Image</Name>
+		</Image>
+		<Image Id="4" AddrType="10" ImageType="3">
+			<Name>Image-2</Name>
+		</Image>
+		<Box File="Term 1 (EK1100).xti" Id="1">
+			<EtherCAT PortABoxInfo="#x00ffffff"/>
+		</Box>
+		<Box File="Term 10 (EK1100).xti" Id="10">
+			<EtherCAT PortABoxInfo="#x02000001"/>
+		</Box>
+		<EtherCAT DcSyncMode="3"/>
+	</Device>
+	<Mappings>
+		<OwnerA>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)">
+				<Link VarA="Term 10 (EK1100)^Term 13 (EL1904)^Module 1 (FSOES)^RxPDO^FSOE" VarB="Term 10 (EK1100)^Term 15 (EL6900)^ConnectionInputs^EmergencyGroup.Term 13 (EL1904) - Module 1 (FSOES)_11 TxPDO"/>
+				<Link VarA="Term 10 (EK1100)^Term 13 (EL1904)^Module 1 (FSOES)^TxPDO^FSOE" VarB="Term 10 (EK1100)^Term 15 (EL6900)^ConnectionOutputs^EmergencyGroup.Term 13 (EL1904) - Module 1 (FSOES)_11 RxPDO"/>
+				<Link VarA="Term 10 (EK1100)^Term 14 (EL2904)^Module 1 (FSOES)^RxPDO^FSOE" VarB="Term 10 (EK1100)^Term 15 (EL6900)^ConnectionInputs^EmergencyGroup.Term 14 (EL2904) - Module 1 (FSOES)_12 TxPDO"/>
+				<Link VarA="Term 10 (EK1100)^Term 14 (EL2904)^Module 1 (FSOES)^TxPDO^FSOE" VarB="Term 10 (EK1100)^Term 15 (EL6900)^ConnectionOutputs^EmergencyGroup.Term 14 (EL2904) - Module 1 (FSOES)_12 RxPDO"/>
+				<Link VarA="Term 10 (EK1100)^Term 15 (EL6900)^ConnectionInputs^EmergencyGroup.Term 13 (EL1904) - Module 1 (FSOES)_11 TxPDO" VarB="Term 10 (EK1100)^Term 13 (EL1904)^Module 1 (FSOES)^RxPDO^FSOE"/>
+				<Link VarA="Term 10 (EK1100)^Term 15 (EL6900)^ConnectionInputs^EmergencyGroup.Term 14 (EL2904) - Module 1 (FSOES)_12 TxPDO" VarB="Term 10 (EK1100)^Term 14 (EL2904)^Module 1 (FSOES)^RxPDO^FSOE"/>
+				<Link VarA="Term 10 (EK1100)^Term 15 (EL6900)^ConnectionOutputs^EmergencyGroup.Term 13 (EL1904) - Module 1 (FSOES)_11 RxPDO" VarB="Term 10 (EK1100)^Term 13 (EL1904)^Module 1 (FSOES)^TxPDO^FSOE"/>
+				<Link VarA="Term 10 (EK1100)^Term 15 (EL6900)^ConnectionOutputs^EmergencyGroup.Term 14 (EL2904) - Module 1 (FSOES)_12 RxPDO" VarB="Term 10 (EK1100)^Term 14 (EL2904)^Module 1 (FSOES)^TxPDO^FSOE"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmItem>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <GVL Name="GVL_Safety" Id="{0e0c9c48-4076-4609-b771-0ecf29577e5d}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	bRunStopToSafety 	AT %Q*	: BOOL := TRUE;
+	bErrAck			 	AT %Q*	: BOOL;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

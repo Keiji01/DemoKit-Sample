@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="P_AnalogTest" Id="{113c6486-bfdf-4dc2-a1f6-6330cdc710ab}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P_AnalogTest
+VAR
+	fbScaleLeftPotentiometer	: FB_SCALE;
+	fbScaleRightPotentiometer	: FB_SCALE;
+	fbScaleVoltimeter			: FB_SCALE_REAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbScaleLeftPotentiometer(
+	iMin:= 0, 
+	iMax:= 32767, 
+	iInput:= GVL_IO.arrAIs[1], 
+	rOutMin:= 0, 
+	rOutMax:= 5, 
+	rEng=> , 
+	iEng=> );
+	
+fbScaleRightPotentiometer(
+	iMin:= 0, 
+	iMax:= 32767, 
+	iInput:= GVL_IO.arrAIs[2], 
+	rOutMin:= 0, 
+	rOutMax:= 5, 
+	rEng=> , 
+	iEng=> );
+	
+	
+fbScaleVoltimeter(
+	iMin:= 0, 
+	iMax:= 10, 
+	iInput:= fbScaleLeftPotentiometer.rEng + fbScaleRightPotentiometer.rEng, 
+	rOutMin:= 0, 
+	rOutMax:= 32767, 
+	rEng=> , 
+	iEng=>GVL_IO.arrAOs[1]);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

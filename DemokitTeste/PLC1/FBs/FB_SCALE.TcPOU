@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_SCALE" Id="{e34f7403-1d29-443a-bbe7-d8ffd1c199b2}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_SCALE
+VAR_INPUT
+	iMin:INT;
+	iMax:INT;
+	iInput:INT;
+	rOutMin:REAL;
+	rOutMax:REAL;
+END_VAR
+VAR_OUTPUT
+	rEng:REAL;
+	iEng:INT;
+END_VAR
+VAR
+	rDelta:REAL;
+	rOffSet:REAL;
+	rAux:REAL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[rDelta:=(rOutMax-rOutMin)/INT_TO_REAL(iMax-iMin);
+rOffSet:=rOutMin- rDelta*INT_TO_REAL(iMin);
+rAux:= (rDelta * INT_TO_REAL(iInput)) + rOffSet;
+rEng:=rAux;
+iEng:=REAL_TO_INT(rAux);]]></ST>
+    </Implementation>
+    <LineIds Name="FB_SCALE">
+      <LineId Id="10" Count="3" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
